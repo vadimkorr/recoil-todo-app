@@ -1,0 +1,20 @@
+.home__title-container {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.home__todolist-container {
+  padding: 5px;
+}
+
+.home__todototal-container {
+  margin-bottom: 5px;
+}
+
+.home__todofilter-container {
+  margin-bottom: 5px;
+}
+
+.home__todoform-container {
+  padding: 5px;
+}

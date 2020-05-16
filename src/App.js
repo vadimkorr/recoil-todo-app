@@ -5,9 +5,9 @@ import { Home } from './screens';
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+      <div>
+        <Home />
+      </div>
   );
 }
 

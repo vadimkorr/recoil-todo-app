@@ -1,13 +1,15 @@
 import React from 'react';
 
 import './TodoList.css';
-import { TodoItem } from '../TodoItem';
+import { TodoItemContainer } from '../TodoItem';
 
 export function TodoList({ items }) {
   return (
     <div>
       {items.map((item) => (
-        <TodoItem key={item.id} item={item} />
+        <div key={item.id} className='todo-list__item-container'>
+          <TodoItemContainer item={item} />
+        </div>
       ))}
     </div>
   );
