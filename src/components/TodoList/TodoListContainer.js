@@ -1,12 +1,10 @@
 import React from 'react';
+import { useRecoilValue } from 'recoil';
 
 import { TodoList } from './TodoList';
+import { filteredTodoItemsState } from '../../state';
 
 export function TodoListContainer() {
-  const todoItems = [
-    { id: 1, text: 'Learn React', isComplete: true },
-    { id: 2, text: 'Learn Recoil', isComplete: true },
-    { id: 3, text: 'Write Todo App', isComplete: true },
-  ];
+  const todoItems = useRecoilValue(filteredTodoItemsState);
   return <TodoList items={todoItems} />;
 }

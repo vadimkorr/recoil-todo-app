@@ -1,9 +1,22 @@
 import React from 'react';
+import { useSetRecoilState } from 'recoil';
+import { v4 as uuid } from 'uuid';
+
 import { TodoForm } from './TodoForm';
+import { todoItemsState } from '../../state';
 
 export function TodoFormContainer({ item }) {
+  const setTodoList = useSetRecoilState(todoItemsState);
+
   function handleSubmit(text) {
-    console.log(text);
+    setTodoList((oldTodoList) => [
+      ...oldTodoList,
+      {
+        id: uuid(),
+        text,
+        isComplete: false,
+      },
+    ]);
   }
 
   return <TodoForm item={item} onSubmit={handleSubmit} />;

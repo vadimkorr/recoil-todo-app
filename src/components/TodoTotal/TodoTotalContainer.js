@@ -1,12 +1,16 @@
 import React from 'react';
+import { useRecoilValue } from 'recoil';
 
 import { TodoTotal } from './TodoTotal';
+import { todoItemsTotalState } from '../../state';
 
 export function TodoTotalContainer() {
-  const totalItemsCount = 10;
-  const totalItemsCompletedCount = 5;
-  const totalItemsUncompletedCount = 5;
-  const itemsCompletedPercent = 50;
+  const {
+    totalItemsCount,
+    totalItemsCompletedCount,
+    totalItemsUncompletedCount,
+    itemsCompletedPercent,
+  } = useRecoilValue(todoItemsTotalState);
 
   return (
     <TodoTotal
