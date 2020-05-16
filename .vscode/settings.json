@@ -1,0 +1,8 @@
+{
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "eslint.autoFixOnSave": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
+}
