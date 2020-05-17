@@ -1,10 +1,10 @@
 import React from 'react';
 import { TodoForm } from './TodoForm';
 
-export function TodoFormContainer({ item }) {
+export function TodoFormContainer() {
   function handleSubmit(text) {
     console.log(text);
   }
 
-  return <TodoForm item={item} onSubmit={handleSubmit} />;
+  return <TodoForm onSubmit={handleSubmit} />;
 }
