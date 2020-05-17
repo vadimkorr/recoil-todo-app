@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 import { TodoForm } from './TodoForm';
 import { todoItemsState } from '../../state';
 
-export function TodoFormContainer({ item }) {
+export function TodoFormContainer() {
   const setTodoList = useSetRecoilState(todoItemsState);
 
   function handleSubmit(text) {
@@ -19,5 +19,5 @@ export function TodoFormContainer({ item }) {
     ]);
   }
 
-  return <TodoForm item={item} onSubmit={handleSubmit} />;
+  return <TodoForm onSubmit={handleSubmit} />;
 }
